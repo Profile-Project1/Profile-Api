@@ -14,7 +14,7 @@ const db = mysql.createConnection({         // إنشاء اتصال بقاعد�
 
 db.connect((err)=>{
    if(err){
-    console.error("Database connection failed")
+    console.error("Database connection failed",err.message)
     return
    }
    console.log('Connected to MySQL database');

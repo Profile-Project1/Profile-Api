@@ -56,7 +56,7 @@ app.post("/register",(req,res)=>{
       const values = [userName, first_name, last_name, email, hash, role, address, phone];
       db.query(query,values,(err,result)=>{
         if(err){
-          return res.status(500).json({ message: "Error registering user" });
+          return res.status(500).json({ message: "Error registering user",err });
         }
         res.status(201).json({ message: "User registered successfully" });
 
